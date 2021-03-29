@@ -942,7 +942,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     left: calc(50% - 3px);
-    top: 170px;
+    top: 100px;
   }
   .main .education__icon-label {
     display: -webkit-box;
