@@ -935,7 +935,7 @@
     position: absolute;
     background: #05985b75;
     width: 3px;
-    height: 400px;
+    height: 300px;
     z-index: 2;
     display: block;
     -webkit-box-pack: center;
@@ -996,7 +996,7 @@
     top: 0;
   }
   .main .education .block-1::before {
-    content: 'Ш';
+    content: 'S';
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1021,7 +1021,7 @@
     position: relative;
   }
   .main .education .block-2::before {
-    content: 'У';
+    content: 'U';
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1046,7 +1046,7 @@
     position: relative;
   }
   .main .education .block-3::before {
-    content: 'К';
+    content: 'C';
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

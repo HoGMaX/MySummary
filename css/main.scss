@@ -695,7 +695,7 @@ $font-text: 'Muli', sans-serif;
                     position: absolute;
                     background: $bgColorGreen-transparent;
                     width: 3px;
-                    height: 400px;
+                    height: 300px;
                     z-index: 2;
                     display: block;
                     justify-content: center;
@@ -739,7 +739,7 @@ $font-text: 'Muli', sans-serif;
                 position: relative;
                 top:0;
                 &::before{
-                    content: 'Ш';
+                    content: 'S';
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -758,7 +758,7 @@ $font-text: 'Muli', sans-serif;
                 top:0;
                 position: relative;
                 &::before{
-                    content: 'У';
+                    content: 'U';
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -777,7 +777,7 @@ $font-text: 'Muli', sans-serif;
                 top:0;
                 position: relative;
                 &::before{
-                    content: 'К';
+                    content: 'C';
                     display: flex;
                     align-items: center;
                     justify-content: center;
