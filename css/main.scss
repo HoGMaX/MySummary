@@ -6,12 +6,13 @@
 @import url("https://use.typekit.net/dlv1cty.css");
 
 //color projects
-$bgColor: #262525;
-$bgColorGreen: #05985a;
-$bgColorGreen-hover: #047e4b;
-$bgColorGreen-transparent: #05985b75;
-$bgColorGreen-dark:#03492c;
-$fontColor: #7B7B7B;
+$bgColor:#41414a;
+$bgColorLine: #3e79c1;
+$bgColorLine-hover: #0a63d0;
+$bgColorLine-transparent:#3e79c1ce;
+$bgColorLine-dark:#074694;
+$fontColor: #bebebe;
+$bgImage: url('../resource/bg-Bluepoligon.png');
 
 // fonts project
 $font-title : 'Raleway', sans-serif;
@@ -44,7 +45,7 @@ $font-text: 'Muli', sans-serif;
     &-bg-image {
         max-width: 100%;
         height: 350px;
-        background: $bgColor url('../resource/bg-library.jpg') no-repeat 100% / cover fixed;
+        background: $bgColor $bgImage no-repeat 100% / cover fixed;
     }
     &__box{
         width: 100%;
@@ -61,11 +62,11 @@ $font-text: 'Muli', sans-serif;
     display:flex;
     background: $bgColor;
     justify-content: space-between;
-    width: calc(100% - 67px);
+    width: calc(100% - 65px);
     padding: 5vh 30px;
     -webkit-box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6); 
     box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6);
-    border-left: 7px solid $bgColorGreen;
+    border-left: 5px solid $bgColorLine-hover;
     &._active{
         transform: translate(0, 0);
         opacity: 1;
@@ -103,7 +104,7 @@ $font-text: 'Muli', sans-serif;
     }
     &__item {
         a{
-            color: $bgColorGreen-hover;
+            color: $bgColorLine-hover;
             cursor: pointer;     
         }
         i{
@@ -139,9 +140,9 @@ $font-text: 'Muli', sans-serif;
         margin: 35vh 0 0 0;
         background-color: $bgColor;
         display: flex;
-        width: calc(100% - 7px);
+        width: calc(100% - 5px);
         flex-direction: column;
-        border-left: 7px solid $bgColorGreen;
+        border-left: 5px solid $bgColorLine-hover;
         
         -webkit-box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6); 
          box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6);
@@ -154,7 +155,7 @@ $font-text: 'Muli', sans-serif;
             margin: 5vh 30px 2vh 30px;
         }
         &__button{
-            background-color: $bgColorGreen;
+            background-color: $bgColorLine;
             margin: 5vh 30px 5vh 30px;
             align-self: center;
             width: 25%;
@@ -167,7 +168,7 @@ $font-text: 'Muli', sans-serif;
                 transition: ease 800ms;
                 -webkit-box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6); 
                 box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6);
-                background-color: $bgColorGreen-hover;
+                background-color: $bgColorLine-hover;
             }
         }
     }
@@ -177,14 +178,14 @@ $font-text: 'Muli', sans-serif;
         background-color: $bgColor;
         &__rows{
             position: relative;
-            min-height: 550px;
+            min-height: 65vh;
         }
         &__icon-label{
             display: flex;
             width: 55px;
             height: 55px;
             border-radius: 50%;
-            background-color: $bgColorGreen;
+            background-color: $bgColorLine;
             justify-content: center;
             align-items: center;
             @include styleTitle;
@@ -202,7 +203,7 @@ $font-text: 'Muli', sans-serif;
             opacity: 1; 
             transition: transform ease 1.2s;
         }
-            border-left: 5px solid $bgColorGreen-hover;
+            border-left: 5px solid $bgColorLine-hover;
             -webkit-box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6); 
             box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6);
             padding:15px 30px;
@@ -228,9 +229,9 @@ $font-text: 'Muli', sans-serif;
             left: 0;
             a{
                 transition: all ease 0.6s;
-                color:$bgColorGreen;
+                color:$bgColorLine;
                 &:hover{
-                    color:$bgColorGreen-dark;
+                    color:$bgColorLine-dark;
                 }  
             }
         }
@@ -245,18 +246,18 @@ $font-text: 'Muli', sans-serif;
                 content: '';
                 width: 105px;
                 height: 3px;
-                background-color: $bgColorGreen-transparent;
+                background-color: $bgColorLine-transparent;
                 z-index: 1;
             }
             &::before{
                 position: absolute;
-                top:35px;
+                top:55px;
                 left: 46%;
                 content: '';
                 width: 3px;
-                height: 225px;
-                background-color: $bgColorGreen-transparent;
-                z-index: 1;
+                height: 220px;
+                background-color: $bgColorLine-transparent;
+                z-index: 0;
             }
         }
         .icon-label-2{
@@ -269,7 +270,7 @@ $font-text: 'Muli', sans-serif;
                 content: '';
                 width: 105px;
                 height: 3px;
-                background-color: $bgColorGreen-transparent;
+                background-color: $bgColorLine-transparent;
                 z-index: 1;
             }
         }
@@ -283,7 +284,7 @@ $font-text: 'Muli', sans-serif;
                 content: '';
                 width: 105px;
                 height: 3px;
-                background-color: $bgColorGreen-transparent;
+                background-color: $bgColorLine-transparent;
                 z-index: 1;
             }
         }
@@ -300,26 +301,23 @@ $font-text: 'Muli', sans-serif;
         &__text{
             @include styleText;
         }
-        
-
     }
     .skils{
         width: 100%;
-        
+        transform: scale(2);
+            opacity: 0;
+            &._active{
+                transform: scale(1);
+                opacity: 1;
+                transition: all ease 1.2s;
+            }
         &__title {
             @include styleTitle();
             text-align: center;
             text-transform: uppercase;
         }
         &__rows {
-            transform: scale(2);
-            opacity: 1;
-            &._active{
-                transform: scale(1);
-                opacity: 1;
-                transition: all ease 1.2s;
-                background-color: $bgColorGreen;
-            }
+            background-color: $bgColorLine;
             width: calc(100%-60px);
             
             display: flex;
@@ -345,211 +343,11 @@ $font-text: 'Muli', sans-serif;
                 color: $bgColor;
                 display: flex;
                 justify-content: space-between;
-                margin: 3vh 0 0 0;
             }
-            &__bar  {
-                &.bar-1{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 60%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                }
-                &.bar-2{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 60%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                }
-                &.bar-3{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 45%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                }
-                &.bar-4{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 45%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-5{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 60%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-6{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 60%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-7{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 45%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-8{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 60%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-9{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 65%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-10{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 60%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-11{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 50%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-12{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 60%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                
+            &__block{
+                display: flex;
+                justify-content: space-between;
+                margin: 3vh 0 0 0;
             }
         }
         
@@ -564,7 +362,7 @@ $font-text: 'Muli', sans-serif;
         &-bg-image {
             max-width: 100%;
             height: 300px;
-            background: $bgColor url('../resource/bg-library.jpg') no-repeat 100% / cover fixed;
+            background: $bgColor $bgImage no-repeat 100% / cover fixed;
             padding: 20vh 0;
         }
         &__box{
@@ -587,7 +385,7 @@ $font-text: 'Muli', sans-serif;
         padding: 5vh 15px;
         -webkit-box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6); 
         box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6);
-        border-left: 3px solid $bgColorGreen;
+        border-left: 3px solid $bgColorLine;
         &__main {
             display: flex;
             flex-direction: column;
@@ -620,7 +418,7 @@ $font-text: 'Muli', sans-serif;
         }
         &__item {
             a{
-                color: $bgColorGreen-hover;
+                color: $bgColorLine-hover;
                 cursor: pointer;     
             }
             i{
@@ -657,7 +455,7 @@ $font-text: 'Muli', sans-serif;
             display: flex;
             width: calc(100% - 3px);
             flex-direction: column;
-            border-left: 3px solid $bgColorGreen;
+            border-left: 3px solid $bgColorLine;
             
             -webkit-box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6); 
              box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6);
@@ -670,7 +468,7 @@ $font-text: 'Muli', sans-serif;
                 margin: 5vh 15px 2vh 15px;
             }
             &__button{
-                background-color: $bgColorGreen;
+                background-color: $bgColorLine;
                 margin: 5vh auto;
                 align-self: center;
                 width: 50%;
@@ -684,16 +482,17 @@ $font-text: 'Muli', sans-serif;
         .education{
             width: 100%;
             background-color: $bgColor;
-            margin: 10vh 0 0 0;
+            
+            margin: 5vh 0 0 0 !important;
             &__rows{
-                margin: 10vh 0 0 0;
+                min-height: 55vh!important;
                 flex-direction: column;
                 height:100%;
                 position: relative;
                 &::after{
                     content: '';
                     position: absolute;
-                    background: $bgColorGreen-transparent;
+                    background: $bgColorLine-transparent;
                     width: 3px;
                     height: 200px;
                     z-index: 2;
@@ -708,7 +507,7 @@ $font-text: 'Muli', sans-serif;
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
-                background-color: $bgColorGreen;
+                background-color: $bgColorLine;
                 justify-content: center;
                 align-items: center;
                 @include styleTitle;
@@ -726,7 +525,7 @@ $font-text: 'Muli', sans-serif;
                 opacity: 1; 
                 transition: transform ease 1.2s;
             }
-                border-left: 3px solid $bgColorGreen-hover;
+                border-left: 3px solid $bgColorLine-hover;
                 -webkit-box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6); 
                 box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6);
                 padding:15px 20px;
@@ -744,7 +543,7 @@ $font-text: 'Muli', sans-serif;
                     align-items: center;
                     justify-content: center;
                     position: absolute;
-                    background-color: $bgColorGreen;
+                    background-color: $bgColorLine;
                     border-radius: 50%;
                     width: 30px;
                     height: 30px;
@@ -763,7 +562,7 @@ $font-text: 'Muli', sans-serif;
                     align-items: center;
                     justify-content: center;
                     position: absolute;
-                    background-color: $bgColorGreen;
+                    background-color: $bgColorLine;
                     border-radius: 50%;
                     right: 7px;
                     top: 2px;
@@ -782,7 +581,7 @@ $font-text: 'Muli', sans-serif;
                     align-items: center;
                     justify-content: center;
                     position: absolute;
-                    background-color: $bgColorGreen;
+                    background-color: $bgColorLine;
                     border-radius: 50%;
                     right: 7px;
                     top: 2px;
@@ -845,7 +644,6 @@ $font-text: 'Muli', sans-serif;
         }
         .skils{
             width: 100%;
-            margin: 10vh 0 0 0;
             &__title {
                 @include styleTitle();
                 text-align: center;
@@ -853,19 +651,12 @@ $font-text: 'Muli', sans-serif;
                 font-size: 26px;       
             }
             &__rows {
-                transform: scale(0.1);
-                opacity: 0;
-                &._active{
-                    transform: scale(1);
-                    opacity: 1;
-                    transition: all ease 850ms;
-                }
                 width: calc(100%-60px);
                 display: flex;
                 flex-direction: column;
                 padding: 5vh 15px;
                 margin: 3vh 0 0 0;
-                background-color: $bgColorGreen;
+                background-color: $bgColorLine;
                 -webkit-box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6); 
                 box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6);
             }
@@ -888,211 +679,10 @@ $font-text: 'Muli', sans-serif;
                     color: $bgColor;
                     display: flex;
                     justify-content: space-between;
-                    margin: 3vh 0 0 0;
                 }
-                &__bar  {
-                    &.bar-1{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 70%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                    }
-                    &.bar-2{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 70%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                    }
-                    &.bar-3{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 45%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                    }
-                    &.bar-4{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 45%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                        
-                    }
-                    &.bar-5{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 45%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                        
-                    }
-                    &.bar-6{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 45%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                        
-                    }
-                    &.bar-7{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 45%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                        
-                    }
-                    &.bar-8{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 45%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                        
-                    }
-                    &.bar-9{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 65%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                        
-                    }
-                    &.bar-10{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 70%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                        
-                    }
-                    &.bar-11{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 50%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                        
-                    }
-                    &.bar-12{
-                        position: relative;
-                        width: 100%;
-                        height: 3px;
-                        background-color: $bgColorGreen-hover;
-                        margin: 1vh 0;
-                        &::after{
-                            position: absolute;
-                            left: 0;
-                            content: '';
-                            width: 60%;
-                            height: 3px;
-                            background-color: $bgColorGreen-dark;
-                            z-index: 1;
-                        }
-                        
-                    }
-                    
+                &__block{
+                    display: flex;
+                    margin: 3vh 0 0 0;
                 }
             }
             
@@ -1100,20 +690,22 @@ $font-text: 'Muli', sans-serif;
     }
 }
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .hello{
+        margin: 40vh 0 0 0 !important;
+    }
     .education{
         width: 100%;
-        margin: 15vh 0 10vh 0 ;
         background-color: $bgColor;
+        min-height: 500px!important;
         &__rows{
             position: relative;
-            min-height: 550px;
         }
         &__icon-label{
             display: flex;
             width: 55px;
             height: 55px;
             border-radius: 50%;
-            background-color: $bgColorGreen;
+            background-color: $bgColorLine;
             justify-content: center;
             align-items: center;
             @include styleTitle;
@@ -1131,7 +723,7 @@ $font-text: 'Muli', sans-serif;
             opacity: 1; 
             transition: transform ease 1.2s;
         }
-            border-left: 5px solid $bgColorGreen-hover;
+            border-left: 5px solid $bgColorLine-hover;
             -webkit-box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6); 
             box-shadow: 4px 5px 10px 0px rgba(0,0,0,0.6);
             padding:15px 30px;
@@ -1167,7 +759,7 @@ $font-text: 'Muli', sans-serif;
                 content: '';
                 width: 105px;
                 height: 3px;
-                background-color: $bgColorGreen-transparent;
+                background-color: $bgColorLine-transparent;
                 z-index: 1;
             }
             &::before{
@@ -1177,7 +769,7 @@ $font-text: 'Muli', sans-serif;
                 content: '';
                 width: 3px;
                 height: 300px !important;
-                background-color: $bgColorGreen-transparent;
+                background-color: $bgColorLine-transparent;
                 z-index: 1;
             }
         }
@@ -1191,7 +783,7 @@ $font-text: 'Muli', sans-serif;
                 content: '';
                 width: 105px;
                 height: 3px;
-                background-color: $bgColorGreen-transparent;
+                background-color: $bgColorLine-transparent;
                 z-index: 1;
             }
         }
@@ -1205,7 +797,7 @@ $font-text: 'Muli', sans-serif;
                 content: '';
                 width: 105px;
                 height: 3px;
-                background-color: $bgColorGreen-transparent;
+                background-color: $bgColorLine-transparent;
                 z-index: 1;
             }
         }
@@ -1227,23 +819,13 @@ $font-text: 'Muli', sans-serif;
     }
     .skils{
         width: 100%;
-        
         &__title {
             @include styleTitle();
             text-align: center;
             text-transform: uppercase;
         }
         &__rows {
-            transform: scale(2);
-            opacity: 1;
-            &._active{
-                transform: scale(1);
-                opacity: 1;
-                transition: all ease 1.2s;
-                background-color: $bgColorGreen;
-            }
             width: calc(100%-40px);
-            
             display: flex;
             justify-content: space-between;
             padding: 5vh 20px;
@@ -1267,211 +849,6 @@ $font-text: 'Muli', sans-serif;
                 color: $bgColor;
                 display: flex;
                 justify-content: space-between;
-                margin: 3vh 0 0 0;
-            }
-            &__bar  {
-                &.bar-1{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 70%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                }
-                &.bar-2{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 70%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                }
-                &.bar-3{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 45%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                }
-                &.bar-4{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 45%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-5{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 45%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-6{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 45%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-7{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 45%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-8{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 45%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-9{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 65%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-10{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 70%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-11{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 50%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                &.bar-12{
-                    position: relative;
-                    width: 100%;
-                    height: 3px;
-                    background-color: $bgColorGreen-hover;
-                    margin: 1vh 0;
-                    &::after{
-                        position: absolute;
-                        left: 0;
-                        content: '';
-                        width: 60%;
-                        height: 3px;
-                        background-color: $bgColorGreen-dark;
-                        z-index: 1;
-                    }
-                    
-                }
-                
             }
         }
         
