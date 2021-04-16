@@ -100,5 +100,5 @@ let console = new SkillBar(
 let git = new SkillBar(
     $selector = '.bar-12',
     sbLabel = 'Git',
-    sbCount = '84'
+    sbCount = '75'
 )

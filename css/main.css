@@ -72,7 +72,7 @@
 }
 
 .conteiner {
-  max-width: 970px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -493,13 +493,13 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 5vh 30px;
-  margin: 5vh 0;
+  margin: 5vh 0 0 0;
   -webkit-box-shadow: 4px 5px 10px 0px rgba(0, 0, 0, 0.6);
   box-shadow: 4px 5px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
 .main .skils .column {
-  width: 25%;
+  width: 30%;
 }
 
 .main .skils .column__label {
@@ -509,7 +509,7 @@
   font-style: normal;
   color: #bebebe;
   color: #41414a;
-  font-size: 26px;
+  font-size: 1.5em;
   text-align: center;
 }
 
